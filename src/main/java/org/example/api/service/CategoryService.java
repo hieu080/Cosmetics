@@ -4,12 +4,11 @@ import org.example.api.dto.CategoryDto;
 
 import java.util.List;
 
+
 public interface CategoryService {
     CategoryDto create(CategoryDto categoryDto);
-
-    List<CategoryDto> getAll();
-
     CategoryDto getById(int id);
-
-    CategoryDto update(CategoryDto categoryDto);
+    List<CategoryDto> getAll();
+    CategoryDto update(int id, CategoryDto categoryDto);
+    void delete(int id);
 }
