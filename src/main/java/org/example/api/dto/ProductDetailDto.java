@@ -9,7 +9,6 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ProductDetailDto {
-    private int id;
     private int productId;
     private String type;
     private double price;

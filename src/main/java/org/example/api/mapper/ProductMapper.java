@@ -10,7 +10,6 @@ public class ProductMapper {
         }
 
         ProductDto dto = new ProductDto();
-        dto.setId(product.getId());
         dto.setName(product.getName());
         dto.setDescription(product.getDescription());
         dto.setCreateTime(product.getCreateTime());
