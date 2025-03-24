@@ -26,11 +26,11 @@ public class Product {
 
     @Column(name = "CreateTime", columnDefinition = "DATETIME DEFAULT GETDATE()")
     @Temporal(TemporalType.TIMESTAMP)
-    private Date createTime = new Date(); // Mặc định là ngày hiện tại
+    private Date createTime;
 
     @Column(name = "LastTime", columnDefinition = "DATETIME DEFAULT GETDATE()")
     @Temporal(TemporalType.TIMESTAMP)
-    private Date lastTime = new Date(); // Mặc định là ngày hiện tại
+    private Date lastTime;
 
     @Column(name = "AverageStar", columnDefinition = "FLOAT DEFAULT 0")
     private float averageStar = 0.0f; // Đánh giá mặc định = 0
@@ -47,4 +47,15 @@ public class Product {
     @Column(name = "CategoryId", nullable = false)
     private int categoryId;
 
+    @PrePersist
+    protected void onCreate() {
+        Date now = new Date();
+        this.createTime = now;
+        this.lastTime = now;
+    }
+
+    @PreUpdate
+    protected void onUpdate() {
+        this.lastTime = new Date();
+    }
 }

@@ -9,6 +9,7 @@ public class CategoryMapper {
             return null;
         }
         CategoryDto dto = new CategoryDto();
+        dto.setId(category.getId());
         dto.setName(category.getName());
         dto.setCreateTime(category.getCreateTime());
         dto.setLastTime(category.getLastTime());

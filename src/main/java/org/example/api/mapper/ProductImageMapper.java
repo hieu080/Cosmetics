@@ -10,6 +10,7 @@ public class ProductImageMapper {
         }
 
         ProductImageDto dto = new ProductImageDto();
+        dto.setId(productImage.getId());
         dto.setProductDetailId(productImage.getProductDetailId());
         dto.setImageLink(productImage.getImageLink());
         dto.setStatus(productImage.isStatus());

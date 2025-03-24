@@ -10,6 +10,7 @@ public class ProductDetailMapper {
         }
 
         ProductDetailDto dto = new ProductDetailDto();
+        dto.setId(productDetail.getId());
         dto.setProductId(productDetail.getProductId()); // Lấy ID của sản phẩm
         dto.setType(productDetail.getType());
         dto.setPrice(productDetail.getPrice());
